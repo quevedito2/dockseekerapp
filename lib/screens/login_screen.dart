@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 30, left: 10),
+              padding: const EdgeInsets.only(top: 30, left: 10),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: IconButton(
@@ -24,25 +24,25 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 5),
-            Image(
+            const SizedBox(height: 5),
+            const Image(
               image: AssetImage('assets/logo.png'),
               height: 100,
               width: 100,
             ),
-            Text('DockSeeker', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-            Container(
+            const Text('DockSeeker', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+            SizedBox(
               width: 300,
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       //hintText: 'Correo',
                       labelText: 'Correo',
                     ),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       //hintText: 'Contraseña',
                       labelText: 'Contraseña',
                     ),
@@ -61,23 +61,28 @@ class LoginScreen extends StatelessWidget {
                 child: const Text('¿Olvidaste tu contraseña?'),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             ElevatedButton(
-              style: ButtonStyle(
+              style: const ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(Colors.red),
               ),
               onPressed: () {},
               child:
-                  Text('Iniciar Sesión', style: TextStyle(color: Colors.white)),
+                  const Text('Iniciar Sesión', style: TextStyle(color: Colors.white)),
             ),
-            Text('¿No tienes una cuenta?'),
+            const Text('¿No tienes una cuenta?'),
             //Text('Únete', style: TextStyle(color: Colors.cyan[900])),
             TextButton(
                 style: TextButton.styleFrom(
                   textStyle: const TextStyle(fontSize: 15),
                 ),
                 onPressed: () {},
-                child: const Text('Únete'),
+                child: TextButton(
+                  onPressed: () {
+                    appRouter.push('/form_signup');
+                  },
+                  child: const Text('Únete'),
+                )
               ),
           ],
         ),

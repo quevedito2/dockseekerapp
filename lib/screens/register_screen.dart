@@ -58,8 +58,11 @@ class RegisterScreen extends StatelessWidget {
 }
 
 class _SectionRow extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final imagePath;
+  // ignore: prefer_typing_uninitialized_variables
   final textButton;
+  // ignore: prefer_typing_uninitialized_variables
   final navigationPath;
 
   const _SectionRow({
@@ -122,9 +125,11 @@ class _SectionRow extends StatelessWidget {
           child: ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(colors.primary),
-              shadowColor: MaterialStatePropertyAll(Colors.black),
+              shadowColor: const MaterialStatePropertyAll(Colors.black),
             ),
-            onPressed: () {},
+            onPressed: () {
+              appRouter.push('/form_signup');
+            },
             child: Text(
               textButton,
               style: textStyles.titleMedium?.copyWith(color: Colors.white),

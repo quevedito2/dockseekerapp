@@ -1,7 +1,6 @@
 import 'package:dockseekerapp/screens/form_signup_screen.dart';
 import 'package:dockseekerapp/screens/index.dart';
 import 'package:dockseekerapp/screens/login_screen.dart';
-import 'package:dockseekerapp/screens/onboarding_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
@@ -26,5 +25,6 @@ final appRouter = GoRouter(
       name: 'form_signup',
       builder: (context, state) => const FormSignUpScreen(),
     )
+
   ],
 );

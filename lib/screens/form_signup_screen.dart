@@ -12,7 +12,7 @@ class FormSignUpScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 30, left: 10),
+              padding: const EdgeInsets.only(top: 30, left: 10),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: IconButton(
@@ -24,39 +24,39 @@ class FormSignUpScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 5),
-            Image(
+            const SizedBox(height: 5),
+            const Image(
               image: AssetImage('assets/logo.png'),
               height: 100,
               width: 100,
             ),
-            Text('DockSeeker',
+            const Text('DockSeeker',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-            Container(
+            SizedBox(
               width: 300,
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       //hintText: 'Nombres y Apellidos',
                       labelText: 'Nombres y Apellidos',
                     ),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       //hintText: 'Correo',
                       labelText: 'Correo electrónico',
                     ),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       //hintText: 'Contraseña',
                       labelText: 'Contraseña',
                     ),
                     obscureText: true,
                   ),
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       //hintText: 'Confirmar contraseña',
                       labelText: 'Confirmar contraseña',
                     ),
@@ -66,33 +66,31 @@ class FormSignUpScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 15),
-                ),
-                onPressed: () {},
-                child: const Text('¿Olvidaste tu contraseña?'),
-              ),
-            ),
-            Spacer(),
+
+            const Spacer(),
             ElevatedButton(
-              style: ButtonStyle(
+              style: const ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(Colors.red),
               ),
               onPressed: () {},
-              child:
-                  Text('Únete', style: TextStyle(color: Colors.white)),
+              child: const Text('Únete', style: TextStyle(color: Colors.white)),
             ),
-            Text('¿Tienes una cuenta?'),
+            const Text('¿Tienes una cuenta?'),
             //Text('Únete', style: TextStyle(color: Colors.cyan[900])),
             TextButton(
               style: TextButton.styleFrom(
                 textStyle: const TextStyle(fontSize: 15),
               ),
               onPressed: () {},
-              child: const Text('Inicia Sesión'),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 15),
+                ),
+                onPressed: () {
+                  appRouter.push('/login');
+                },
+                child: const Text('Iniciar Sesión'),
+              ),
             ),
           ],
         ),
