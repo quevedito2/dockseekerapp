@@ -26,31 +26,33 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
-            Positioned(
-              left: 10,
-              top: 10,
-              child: IconButton(
-                onPressed: () {
-                  appRouter.pop();
-                },
-                icon: const Icon(Icons.arrow_back),
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Positioned(
+                left: 10,
+                top: 10,
+                child: IconButton(
+                  onPressed: () {
+                    appRouter.pop();
+                  },
+                  icon: const Icon(Icons.arrow_back),
+                ),
               ),
-            ),
-            Expanded(
-              child: Column(
-                children: [
-                  for (var section in sectionsList)
-                    _SectionRow(
-                      imagePath: section['imagePath'],
-                      textButton: section['textButton'],
-                      navigationPath: section['/cuidador'],
-                    )
-                ],
+              Expanded(
+                child: Column(
+                  children: [
+                    for (var section in sectionsList)
+                      _SectionRow(
+                        imagePath: section['imagePath'],
+                        textButton: section['textButton'],
+                        navigationPath: section['/cuidador'],
+                      )
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

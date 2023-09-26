@@ -40,7 +40,8 @@ class OnboardingScreen extends StatelessWidget {
               width: 220,
               child: FilledButton(
                 onPressed: () {
-                  appRouter.push('/login');
+                  // appRouter.push('/login');
+                  appRouter.replace('/home');
                 },
                 style: ButtonStyle(
                   backgroundColor:
