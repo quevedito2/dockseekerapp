@@ -1,29 +1,29 @@
 import 'package:dockseekerapp/router/app_router.dart';
 import 'package:flutter/material.dart';
 
+List<Map<dynamic, String>> sectionsList = [
+  {
+    'imagePath': 'assets/cuidador.png',
+    'textButton': 'Cuidador',
+    'navigationPath': '/cuidador',
+  },
+  {
+    'imagePath': 'assets/doctor.png',
+    'textButton': 'Profesional de la salud',
+    'navigationPath': '/cuidador',
+  },
+  {
+    'imagePath': 'assets/paciente.png',
+    'textButton': 'Paciente',
+    'navigationPath': '/cuidador',
+  },
+];
+
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Map<dynamic, String>> sectionsList = [
-      {
-        'imagePath': 'assets/cuidador.png',
-        'textButton': 'Cuidador',
-        'navigationPath': '/cuidador',
-      },
-      {
-        'imagePath': 'assets/doctor.png',
-        'textButton': 'Profesional de la salud',
-        'navigationPath': '/cuidador',
-      },
-      {
-        'imagePath': 'assets/paciente.png',
-        'textButton': 'Paciente',
-        'navigationPath': '/cuidador',
-      },
-    ];
-
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -44,7 +44,7 @@ class RegisterScreen extends StatelessWidget {
                   for (var section in sectionsList)
                     _SectionRow(
                       imagePath: section['imagePath'],
-                      textButton: section['textButton'],            
+                      textButton: section['textButton'],
                       navigationPath: section['/cuidador'],
                     )
                 ],

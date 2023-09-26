@@ -7,8 +7,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.grey.shade300,
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Padding(
@@ -30,7 +29,8 @@ class LoginScreen extends StatelessWidget {
               height: 100,
               width: 100,
             ),
-            const Text('DockSeeker', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+            const Text('DockSeeker',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
             SizedBox(
               width: 300,
               child: Column(
@@ -46,6 +46,7 @@ class LoginScreen extends StatelessWidget {
                       //hintText: 'Contraseña',
                       labelText: 'Contraseña',
                     ),
+                    obscureText: true,
                   ),
                 ],
               ),
@@ -61,15 +62,16 @@ class LoginScreen extends StatelessWidget {
                 child: const Text('¿Olvidaste tu contraseña?'),
               ),
             ),
-            const Spacer(),
+            const SizedBox(height: 230),
             ElevatedButton(
               style: const ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(Colors.red),
               ),
               onPressed: () {},
-              child:
-                  const Text('Iniciar Sesión', style: TextStyle(color: Colors.white)),
+              child: const Text('Iniciar Sesión',
+                  style: TextStyle(color: Colors.white)),
             ),
+            //const Spacer(),
             const Text('¿No tienes una cuenta?'),
             //Text('Únete', style: TextStyle(color: Colors.cyan[900])),
             TextButton(
@@ -82,8 +84,7 @@ class LoginScreen extends StatelessWidget {
                     appRouter.push('/form_signup');
                   },
                   child: const Text('Únete'),
-                )
-              ),
+                )),
           ],
         ),
       ),

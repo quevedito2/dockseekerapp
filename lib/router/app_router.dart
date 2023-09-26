@@ -1,3 +1,4 @@
+import 'package:dockseekerapp/screens/carga_archivo_paciente.dart';
 import 'package:dockseekerapp/screens/form_signup_screen.dart';
 import 'package:dockseekerapp/screens/index.dart';
 import 'package:dockseekerapp/screens/login_screen.dart';
@@ -24,6 +25,11 @@ final appRouter = GoRouter(
       path: '/form_signup',
       name: 'form_signup',
       builder: (context, state) => const FormSignUpScreen(),
+    ),
+    GoRoute(
+      path: '/carga_archivo_paciente',
+      name: 'carga_archivo_paciente',
+      builder: (context, state) => const CargaArchivoPaciente(),
     )
 
   ],

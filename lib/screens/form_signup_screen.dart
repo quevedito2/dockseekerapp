@@ -8,7 +8,7 @@ class FormSignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.grey.shade300,
+        color: Colors.white,
         child: Column(
           children: [
             Padding(
@@ -65,14 +65,16 @@ class FormSignUpScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 160),
 
-            const Spacer(),
+            //const Spacer(),
             ElevatedButton(
               style: const ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(Colors.red),
               ),
-              onPressed: () {},
+              onPressed: () {
+                appRouter.push('/carga_archivo_paciente');
+              },
               child: const Text('Únete', style: TextStyle(color: Colors.white)),
             ),
             const Text('¿Tienes una cuenta?'),
