@@ -2,9 +2,9 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 
 List imageList = [
-  'http://placekitten.com/400/300',
-  'http://placekitten.com/400/300',
-  'http://placekitten.com/400/300',
+  'https://i.ibb.co/NrqGNX0/dms.jpg',
+  'https://i.ibb.co/ss8c2MB/city.png',
+  'https://i.ibb.co/BNgHQcW/slider-image.jpg',
 ];
 
 class ImageSlider extends StatelessWidget {

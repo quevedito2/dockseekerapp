@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
           child: Text(
             'Menú',
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
       ),
