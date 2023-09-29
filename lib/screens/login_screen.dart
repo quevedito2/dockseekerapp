@@ -1,5 +1,6 @@
 import 'package:dockseekerapp/router/app_router.dart';
 import 'package:flutter/material.dart';
+//import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -16,7 +17,8 @@ class LoginScreen extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: IconButton(
                   onPressed: () {
-                    appRouter.pop();
+                    appRouter.push('/');
+                    //appRouter.pop();
                   },
                   icon: const Icon(Icons.arrow_back),
                   alignment: Alignment.topLeft,

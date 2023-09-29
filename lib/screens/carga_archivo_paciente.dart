@@ -65,7 +65,7 @@ class CargaArchivoPaciente extends StatelessWidget {
                 backgroundColor: MaterialStatePropertyAll(Colors.red),
               ),
               onPressed: () {
-                appRouter.push('/carga_archivo_paciente');
+                appRouter.push('/home');
               },
               child: const Text('Finalizar',
                   style: TextStyle(color: Colors.white)),

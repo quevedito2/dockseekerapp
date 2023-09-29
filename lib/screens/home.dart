@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             label: 'Inicio',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.save),
+            icon: Icon(Icons.favorite),
             label: 'Favoritos',
           ),
           BottomNavigationBarItem(
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
       ),
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: colors.primary,
+        backgroundColor: Color.fromRGBO(0, 147, 171, 1.0),
         title: const Align(
           alignment: Alignment.center,
           child: Text(
@@ -55,8 +55,12 @@ class HomeScreen extends StatelessWidget {
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  'Bievenido Camilo',
-                  style: textStyles.titleLarge,
+                  'Bienvenido Camilo',
+                  style: TextStyle(
+                      color: Color(0xFFfd5d5d), // Color en formato hexadecimal
+                      // color: Color.fromRGBO(253, 93, 93, 1.0), // Color en formato rgb
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold),
                   textAlign: TextAlign.left,
                 ),
               ),
@@ -64,7 +68,11 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Text(
               '¡Novedades!',
-              style: textStyles.titleLarge,
+              style: TextStyle(
+                  color: const Color.fromRGBO(
+                      0, 147, 171, 1.0), // Color en formato rgb
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
             const ImageSlider(),
@@ -75,11 +83,92 @@ class HomeScreen extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: Text(
                   '¿Qué necesitas?',
-                  style: textStyles.titleLarge,
+                  style: TextStyle(
+                      color: Color(0xFFfd5d5d), // Color en formato hexadecimal
+                      // color: Color.fromRGBO(253, 93, 93, 1.0), // Color en formato rgb
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-            // Placeholder(),
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                InkWell(
+                  onTap: () {
+                    print('Botón presionado');
+                  },
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset('assets/cita_medica.png'),
+                      Text('Sacar Cita'),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    print('Botón presionado');
+                  },
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset('assets/asistencia.png'),
+                      Text('Sacar Cita'),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    print('Botón presionado');
+                  },
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset('assets/vacunas.png'),
+                      Text('Sacar Cita'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                InkWell(
+                  onTap: () {
+                    print('Botón presionado');
+                  },
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset('assets/historial_medico.png'),
+                      Text('Historial Médico'),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    print('Botón presionado');
+                  },
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset('assets/ambulancia.png'),
+                      Text('Ambulancia'),
+                    ],
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    print('Botón presionado');
+                  },
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset('assets/consultoria.png'),
+                      Text('Consultoria'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

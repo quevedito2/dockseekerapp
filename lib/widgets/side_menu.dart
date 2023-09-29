@@ -7,7 +7,7 @@ List<Map<dynamic, dynamic>> navigationSection = [
     'navigationPath': '/cuidador',
   },
   {
-    'icon': Icons.verified,
+    'icon': Icons.shield_outlined,
     'text': 'Token digital',
     'navigationPath': '/cuidador',
   },
@@ -17,9 +17,34 @@ List<Map<dynamic, dynamic>> navigationSection = [
     'navigationPath': '/cuidador',
   },
   {
-    'icon': Icons.book,
+    'icon': Icons.menu_book_rounded,
     'text': 'Experiencias',
     'navigationPath': '/cuidador',
+  },
+  {
+    'icon': Icons.wallet, 
+    'text': 'Operativas',
+    'navigationPath': '/operativas',
+  },
+  {
+    'icon': Icons.settings,
+    'text': 'Configuración',
+    'navigationPath': '/configuracion',
+  },
+  {
+    'icon': Icons.warning,
+    'text': 'SOS Cliente',
+    'navigationPath': '/sos_cliente',
+  },
+  {
+    'icon': Icons.refresh,
+    'text': 'Solicitar Revisión',
+    'navigationPath': '/solicitar_revision',
+  },
+  {
+    'icon': Icons.help,
+    'text': 'Acerca de DockSeeker',
+    'navigationPath': '/acerca_de_dockseeker',
   },
 ];
 
@@ -30,19 +55,29 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     int navDrawerIndex = 0;
 
-    return NavigationDrawer(
-      selectedIndex: navDrawerIndex, children: [
-      for (var item in navigationSection)
+    return Container(
+      decoration: BoxDecoration(
+        color:
+            Color.fromRGBO(8, 132, 152, 1.0),
+      ),
+      child: NavigationDrawer(selectedIndex: navDrawerIndex, children: [
+        for (var item in navigationSection)
+          NavigationDrawerDestination(
+            icon: Icon(item['icon']!),
+            label: Text(item['text']!),
+          ),
+        // ...navigationSection.map(
+        //   (item) => NavigationDrawerDestination(
+        //     icon: Icon(Icons.abc),
+        //     label: Text('text'),
+        //   ),
+        // )
+        SizedBox(height: 190),
         NavigationDrawerDestination(
-          icon: Icon(item['icon']!),
-          label: Text(item['text']!),
+          icon: Icon(Icons.exit_to_app),
+          label: Text('Salir'),
         ),
-      // ...navigationSection.map(
-      //   (item) => NavigationDrawerDestination(
-      //     icon: Icon(Icons.abc),
-      //     label: Text('text'),
-      //   ),
-      // )
-    ]);
+      ]),
+    );
   }
 }
