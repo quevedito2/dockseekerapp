@@ -69,7 +69,9 @@ class LoginScreen extends StatelessWidget {
               style: const ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(Colors.red),
               ),
-              onPressed: () {},
+              onPressed: () {
+                appRouter.push('/home');
+              },
               child: const Text('Iniciar Sesión',
                   style: TextStyle(color: Colors.white)),
             ),
