@@ -65,7 +65,7 @@ class FormSignUpScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 160),
+            const SizedBox(height: 130),
 
             //const Spacer(),
             ElevatedButton(

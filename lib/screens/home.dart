@@ -113,7 +113,7 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       Image.asset('assets/asistencia.png'),
-                      Text('Sacar Cita'),
+                      Text('Asistencia'),
                     ],
                   ),
                 ),
@@ -124,7 +124,7 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       Image.asset('assets/vacunas.png'),
-                      Text('Sacar Cita'),
+                      Text('Vacunas'),
                     ],
                   ),
                 ),
@@ -163,7 +163,7 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       Image.asset('assets/consultoria.png'),
-                      Text('Consultoria'),
+                      Text('Consultoría'),
                     ],
                   ),
                 ),

@@ -30,6 +30,7 @@ environment:
 dependencies:
   card_swiper: ^3.0.1
   cupertino_icons: ^1.0.2
+  file_picker: ^5.5.0
   flutter:
     sdk: flutter
   go_router: ^10.1.0
