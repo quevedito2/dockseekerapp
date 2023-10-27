@@ -3,6 +3,7 @@ import 'package:dockseekerapp/screens/form_signup_screen.dart';
 import 'package:dockseekerapp/screens/home.dart';
 import 'package:dockseekerapp/screens/index.dart';
 import 'package:dockseekerapp/screens/login_screen.dart';
+import 'package:dockseekerapp/screens/noticias.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
@@ -37,6 +38,9 @@ final appRouter = GoRouter(
       name: 'home',
       builder: (context, state) => const HomeScreen(),
     ),
-
+    GoRoute(
+        path: '/noticias',
+        name: 'noticias',
+        builder: (context, state) => const NoticiasScreen()),
   ],
 );

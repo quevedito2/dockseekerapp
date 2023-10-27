@@ -1,5 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
+import 'package:dockseekerapp/screens/noticias.dart';
 import 'package:flutter/material.dart';
+//import 'package:dockseekerapp/screens/noticias.dart';
 
 List imageList = [
   'https://i.ibb.co/NrqGNX0/dms.jpg',
@@ -24,9 +26,15 @@ class ImageSlider extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        itemBuilder: (context, index) => Image.network(
-          imageList[index],
-          fit: BoxFit.cover,
+        itemBuilder: (context, index) => GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => NoticiasScreen()));
+          },
+          child: Image.network(
+            imageList[index],
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
